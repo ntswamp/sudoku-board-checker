@@ -4,7 +4,7 @@ import (
 	"strconv"
 )
 
-//check if len(text) == 81 before further using
+//MUST check if len(text) == 81 before any further using
 func IsBoardSolvable(text string) bool {
 	board := parseText(text)
 	if !hasEmptyCell(board) || len(text) != 81 || text == "000000000000000000000000000000000000000000000000000000000000000000000000000000000" {

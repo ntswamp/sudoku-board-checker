@@ -6,7 +6,7 @@ func TestParseText(t *testing.T) {
 	oktext := "123456789123456789123456789123456789123456089123456789123456789123456789123456789"
 	result := parseText(oktext)
 
-	//row 5, col 7, that's 0
+	//row 5 col 7, that's 0
 	if result[4][6] != 0 {
 		t.Error("want: 0, got:", result[4][6])
 	}
