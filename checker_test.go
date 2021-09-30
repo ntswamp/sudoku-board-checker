@@ -20,6 +20,11 @@ func TestIsBoardSolvable(t *testing.T) {
 	//bad = "000000000000000000000000000000000000000000000000000000000000000000000000000000000"
 	good := "735614892842973561961285374286349157413857926579126438157492683694738215328561740"
 
+	t.Log("bad puzzle:")
+	PrintBoard(*parseText(bad))
+	t.Log("good puzzle:")
+	PrintBoard(*parseText(good))
+
 	if IsBoardSolvable(bad) != false || IsBoardSolvable(good) != true {
 		t.Error("want: false true got:", IsBoardSolvable(bad), IsBoardSolvable(good))
 	}
